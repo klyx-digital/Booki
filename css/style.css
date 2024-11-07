@@ -1,0 +1,583 @@
+/****** General ***********/
+* {
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #0065fc;
+  --main-bg-color: #f2f2f2;
+  --filter-bg-color: #deebff;
+}
+
+.fa-solid {
+  color: var(--main-color);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 22px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  cursor: pointer;
+}
+
+.card img {
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 16px;
+}
+
+.euro {
+  font-weight: 700;
+}
+
+.neutral-star {
+  color: var(--main-bg-color);
+}
+
+/* Barre de navigation */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+#logo {
+  margin-top: 15px;
+}
+
+nav ul li {
+  padding: 20px;
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+nav ul li:hover {
+  color: #0065fc;
+  border-top: 2px solid #0065fc;
+  cursor: pointer;
+}
+
+/* Barre de Recherche */
+
+form {
+  display: flex;
+  margin: 20px 0px;
+}
+
+form i {
+  background-color: #f2f2f2;
+  padding: 15px;
+  border-radius: 15px 0px 0px 15px;
+}
+
+.search-button {
+  background-color: #0065fc;
+  color: white;
+  padding: 15px;
+  border-radius: 0px 15px 15px 0px;
+  font-weight: 700;
+  border: none;
+}
+
+form input {
+  border: 1px solid #f2f2f2;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+}
+
+.search-button:hover {
+  cursor: pointer;
+}
+
+.search-button i {
+  display: none;
+}
+
+/* filtres recherche */
+
+#marseille {
+  margin-bottom: 40px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  border: 2px solid #d9d9d9;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.box i {
+  margin: 0px 5px;
+}
+
+.box:hover {
+  background-color: #deebff;
+  cursor: pointer;
+}
+
+#aligement-des-filtre {
+  display: flex;
+  font-weight: 700;
+}
+
+#filtre {
+  display: flex;
+}
+
+#icone-info {
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  padding: 7px;
+  margin-right: 10px;
+}
+
+#information-logement {
+  display: flex;
+  margin: 20px 0px;
+  align-items: center;
+}
+
+/****** Hebergements And Populaires ***********/
+.hebergements-and-populaires {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.hebergements-and-populaires section {
+  background-color: var(--main-bg-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/****** Hebergements ***********/
+.hebergements img {
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+  object-fit: cover;
+  height: 150px;
+}
+
+.grille-hotel-marseille {
+  margin-top: 30px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.hebergements {
+  width: 65%;
+}
+
+.text-gras {
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+/****** Populaires ***********/
+.populaires {
+  width: 32%;
+}
+
+.populaires-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.populaires-cards .card {
+  display: flex;
+  margin-top: 33px;
+}
+
+.populaires-cards img {
+  width: 33%;
+  height: 136px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.populaires-cards .card-content {
+  width: 67%;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.populaires-cards .card-title {
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.populaires-cards .card-subtitle {
+  margin: 0;
+}
+
+.populaires-cards .card-rating {
+  margin-bottom: 5px;
+}
+
+/* Activités a Marseille */
+
+#activité {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+#activité img {
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+  height: 87%;
+  object-fit: cover;
+}
+
+.container {
+  background-color: white;
+  border-radius: 20px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  height: 440px;
+}
+
+.container p {
+  height: 13%;
+  width: 100%;
+  font-weight: 700;
+  margin: 10px;
+}
+
+/* footer */
+
+#fin-de-page {
+  display: flex;
+  background-color: #f2f2f2;
+  margin-top: 50px;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+}
+
+.divers {
+  margin-left: 20px;
+  margin-right: 13rem;
+}
+
+#fin-de-page p {
+  padding: 10px;
+}
+
+h4 {
+  padding: 10px;
+}
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+  /* Hebergement populaire & Marseille */
+
+  .hebergements-and-populaires {
+    flex-direction: column;
+  }
+
+  .hebergements {
+    width: 100%;
+  }
+
+  .populaires {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .populaires-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .populaires-cards a {
+    width: 30%;
+  }
+
+  .populaires-cards .card-title {
+    font-size: 14px;
+  }
+
+  .populaires-cards .card-subtitle {
+    font-size: 13px;
+  }
+
+  /* Activite a Marseille */
+
+  .container {
+    height: 300px;
+  }
+
+  #activité img {
+    height: 80%;
+  }
+
+  .container p {
+    height: 20%;
+  }
+
+  /* Footer */
+  #fin-de-page {
+    width: 100%;
+  }
+
+  .divers {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+  /* General */
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-container {
+    width: 100%;
+    max-width: 768px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* barre de navigation */
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  nav {
+    border-bottom: 2px solid #f2f2f2;
+    margin: auto;
+    width: 100%;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    max-width: 768px;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul li:hover {
+    color: #0065fc;
+    border-bottom: 2px solid #0065fc;
+    border-top: none;
+  }
+
+  /* En-tete avec titre est sous titre */
+
+  .en-tete {
+    margin: 20px;
+  }
+
+  .en-tete h1 {
+    margin-bottom: 10px;
+  }
+
+  /* Barre de recherche */
+
+  .search-button .text {
+    display: none;
+  }
+
+  .search-button i {
+    display: inline;
+    padding: 4px;
+    background-color: #0065fc;
+    color: white;
+  }
+
+  .search-button {
+    border-radius: 12px;
+    width: 10%;
+  }
+
+  form input {
+    border-right: none;
+  }
+
+  .recherche {
+    width: 90%;
+    height: auto;
+    margin: 30px auto;
+  }
+
+  form i {
+    width: 10%;
+  }
+
+  form input {
+    width: 80%;
+  }
+
+  /*Filtre de recherche */
+
+  #aligement-des-filtre {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #filtre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  #information-logement {
+    margin: 15px 30px;
+  }
+
+  .text-gras {
+    margin: 20px;
+  }
+
+  /****** Hebergements And Populaires ***********/
+
+  .hebergements-and-populaires {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hebergements {
+    grid-column: 1 / 2;
+    grid-row: 2/3;
+  }
+
+  .populaires {
+    grid-column: 1 / 2;
+    grid-row: 1/2;
+    margin: 0px;
+  }
+
+  /* Hebergement populaire */
+
+  .populaires-cards {
+    display: block;
+  }
+  .populaires-cards .card {
+    height: 170px;
+  }
+
+  .populaires-cards img {
+    width: 30%;
+    height: auto;
+  }
+
+  .populaires-cards .card-content {
+    width: 70%;
+    height: auto;
+  }
+
+  /* Hebergement a Marseille */
+
+  .hebergements {
+    background-color: white !important;
+  }
+
+  .grille-hotel-marseille {
+    display: block;
+  }
+
+  .grille-hotel-marseille .card {
+    margin-bottom: 20px;
+    height: 200px;
+  }
+  .grille-hotel-marseille img {
+    height: 64%;
+  }
+
+  .grille-hotel-marseille .card-content {
+    height: 36%;
+    padding: 5px;
+  }
+
+  /* Activites a Marseilee */
+
+  #activité {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    width: 90%;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  #activité img {
+    height: 150px;
+    object-fit: cover;
+  }
+
+  /* footer */
+
+  #fin-de-page {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .divers {
+    margin-top: 20px;
+  }
+
+  .titres {
+    margin: 30px;
+  }
+}
