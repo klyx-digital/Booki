@@ -73,10 +73,9 @@ header {
 
 #logo {
   margin-top: 15px;
-  width: 15%;
+  width: 150px;
   height: auto;
-  max-width: 150px;
-  padding: 15px;
+  padding: 5px;
 }
 
 nav ul li {
@@ -103,8 +102,12 @@ form i {
   padding: 15px;
   border-radius: 15px 0px 0px 15px;
 }
-
 .search-button {
+  border: none;
+  background-color: white;
+}
+
+.search-button .text {
   background-color: #0065fc;
   color: white;
   padding: 15px;
@@ -286,10 +289,9 @@ form input {
   height: 440px;
 }
 
-.container p {
+.container h3 {
   height: 13%;
   width: 100%;
-  font-weight: 700;
   margin: 10px;
 }
 
@@ -365,7 +367,7 @@ h4 {
     height: 80%;
   }
 
-  .container p {
+  .container h3 {
     height: 20%;
   }
 
@@ -441,19 +443,18 @@ h4 {
 
   /* Barre de recherche */
 
-  .search-button .text {
+  .search-button span {
     display: none;
   }
 
   .search-button i {
     display: inline;
-    padding: 4px;
     background-color: #0065fc;
     color: white;
+    border-radius: 10px;
   }
 
   .search-button {
-    border-radius: 12px;
     width: 10%;
   }
 
